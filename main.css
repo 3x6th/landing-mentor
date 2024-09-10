@@ -391,6 +391,26 @@ header {
     margin: 20px 0;
 }
 
+.comeback-button {
+    background-color: #f9c321;
+    color: black;
+    border: none;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 186px;
+}
+
+.comeback-button:hover {
+    background-color: #f8b51a;
+}
+
 @media screen and (max-width: 804px) {
     header {
         flex-direction: row-reverse;

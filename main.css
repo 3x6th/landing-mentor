@@ -392,9 +392,9 @@ header {
 }
 
 .comeback-button {
-    background-color: #f9c321;
-    color: black;
-    border: none;
+    background-color: #FBC520;
+    border: 1px solid #FBC520;
+    color: #3C2C0B;
     padding: 10px 30px;
     text-align: center;
     text-decoration: none;
@@ -408,7 +408,8 @@ header {
 }
 
 .comeback-button:hover {
-    background-color: #f8b51a;
+    background-color: #FAB619;
+    border: 1px solid #FAB619;
 }
 
 @media screen and (max-width: 804px) {

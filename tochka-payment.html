@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tochka-style.css">
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Оплата | Perevalov Java Mentor</title>
+</head>
+
+<body>
+<main class="payment-main">
+    <div class="payment-container">
+        <h1 class="payment__title">Оплата услуг</h1>
+        <form class="payform-tbank" name="payform-tbank" id="payform-tbank">
+            <input class="payform-tbank-row" type="text" placeholder="Сумма заказа" name="amount" required>
+            <input class="payform-tbank-row" type="text" placeholder="Описание заказа" name="description"
+                   value="Консультация в области IT" disabled>
+            <input class="payform-tbank-row" type="email" placeholder="E-mail" name="email">
+            <input class="payform-tbank-row" type="tel" placeholder="Контактный телефон" name="phone">
+            <div class="payform-tbank-button-wrapper">
+                <input class="payform-tbank-btn" style="margin-bottom: 0.7rem" type="submit" value="Оплатить">
+                <a href="/" class="comeback-button payment-button-container" rel="noopener noreferrer">
+                    Вернуться на главную
+                </a>
+            </div>
+        </form>
+
+        <script type="text/javascript">
+            const TPF = document.getElementById("payform-tbank");
+
+            TPF.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const {amount, email, phone} = TPF;
+
+                if (!email.value && !phone.value)
+                    return alert("Поля E-mail и Phone не должны быть пустыми");
+
+                axios({
+                    method: 'post',
+                    url: 'Надо указать тут адрес бэкенда',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    data: {
+                        amount: amount.value,
+                        email: email.value,
+                        phone: phone.value,
+                    }
+                }).then(function (response) {
+                    if (response.data && typeof response.data === 'string') {
+                        window.location.href = response.data;
+                    } else {
+                        alert('Не удалось получить ссылку для оплаты');
+                    }
+                }).catch(function (error) {
+                    console.error('Ошибка:', error);
+                    alert('Произошла ошибка при создании оплаты');
+                });
+            })
+        </script>
+
+    </div>
+    <footer>
+        <div class="footer__description">
+            ИП Перевалов Никита Алексеевич
+            ИНН:&nbsp;701706876288
+            ОГРНИП:&nbsp;324700000034250
+        </div>
+    </footer>
+</main>
+</body>
+
+</html>

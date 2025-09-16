@@ -412,6 +412,75 @@ header {
     border: 1px solid #FAB619;
 }
 
+/* Стиль кнопки возврата для страниц договоров в стиле главной страницы */
+.contract-page .comeback-button {
+    background-color: var(--second-color);
+    border: 2px solid var(--second-color);
+    color: #fff;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: var(--small-font-size);
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: var(--thin-font-weight);
+    min-width: 180px;
+}
+
+.contract-page .comeback-button:hover {
+    background-color: #fff;
+    color: var(--second-color);
+    text-decoration: none;
+}
+
+/* legal documents styles */
+.legal-documents-container {
+    width: var(--width);
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.legal-documents-title {
+    font-size: var(--big-font-size);
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--second-color);
+}
+
+.legal-documents-buttons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.legal-button {
+    background-color: #f8f9fa;
+    border: 2px solid var(--second-color);
+    color: var(--second-color);
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: var(--small-font-size);
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: var(--thin-font-weight);
+    min-width: 180px;
+}
+
+.legal-button:hover {
+    background-color: var(--second-color);
+    color: #fff;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 804px) {
     header {
         flex-direction: row-reverse;
@@ -471,6 +540,21 @@ header {
         top: -2vh;
         left: 8vw;
         width: 70px;
+    }
+
+    .legal-documents-container {
+        width: 90%;
+        padding: 15px 0;
+    }
+    
+    .legal-documents-title {
+        font-size: var(--mobile-big-font-size);
+    }
+    
+    .legal-button {
+        font-size: var(--mobile-small-font-size);
+        padding: 10px 20px;
+        min-width: 150px;
     }
 
 }
@@ -533,4 +617,115 @@ header {
     justify-content: center;
     align-items: center;
     flex-grow: 1;
+}
+
+.payment__agreement {
+    font-size: var(--small-font-size);
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: var(--thin-font-weight);
+    line-height: 1.5;
+}
+
+.payment__link {
+    color: var(--second-color);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.payment__link:hover {
+    color: #5a4a4a;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 804px) {
+    .payment__agreement {
+        font-size: var(--mobile-small-font-size);
+        margin-bottom: 15px;
+    }
+}
+
+/* offer pages styles */
+.offer-container {
+    width: var(--width);
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.offer-title {
+    font-size: var(--big-font-size);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--second-color);
+}
+
+.offer-version {
+    font-size: var(--small-font-size);
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.offer-content {
+    line-height: 1.6;
+}
+
+.offer-content h2 {
+    font-size: calc(var(--big-font-size) * 0.8);
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--second-color);
+}
+
+.offer-content p {
+    font-size: var(--small-font-size);
+    margin-bottom: 15px;
+    text-align: justify;
+    font-weight: var(--thin-font-weight);
+}
+
+.offer-content ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.offer-content li {
+    font-size: var(--small-font-size);
+    margin-bottom: 8px;
+    font-weight: var(--thin-font-weight);
+}
+
+@media screen and (max-width: 804px) {
+    .offer-container {
+        width: 90%;
+        padding: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .offer-title {
+        font-size: var(--mobile-big-font-size);
+    }
+    
+    .offer-version {
+        font-size: var(--mobile-small-font-size);
+    }
+    
+    .offer-content h2 {
+        font-size: calc(var(--mobile-big-font-size) * 0.8);
+    }
+    
+    .offer-content p,
+    .offer-content li {
+        font-size: var(--mobile-small-font-size);
+    }
 }

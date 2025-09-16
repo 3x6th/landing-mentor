@@ -448,6 +448,8 @@ header {
     font-size: var(--big-font-size);
     font-weight: bold;
     margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
     color: var(--second-color);
 }
 

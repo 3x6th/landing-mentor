@@ -4,17 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <link rel="icon" type="image/png" href="img/icon.png">
-    <link rel="shortcut icon" href="img/icon.png">
-    <link rel="apple-touch-icon" href="img/icon.png">
-    <title>Оплата | Perevalov Java Mentor</title>
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="icon" type="image/png" href="../../img/icon.png">
+    <link rel="shortcut icon" href="../../img/icon.png">
+    <link rel="apple-touch-icon" href="../../img/icon.png">
+    <title>Оплата "С нуля" | Perevalov Java Mentor</title>
 </head>
 
 <body>
     <main class="payment-main">
         <div class="payment-container">
-            <h1 class="payment__title">Оплата услуг</h1>
+            <h1 class="payment__title">Оплата услуг "С нуля"</h1>
+            <p class="payment__agreement">
+                Продолжая оплату вы соглашаетесь с условиями 
+                <a href="/contract-from-zero" class="payment__link">оферты</a>.
+            </p>
             <script src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff_v2.js"></script>
             <form class="payform-tbank" name="payform-tbank" id="payform-tbank">
                 <input class="payform-tbank-row" type="hidden" name="terminalkey" value="1725879320086">
@@ -43,10 +47,8 @@
                         TPF.receipt.value = JSON.stringify({
                             "EmailCompany": "perevalov.na@mail.ru",
                             "Taxation": "usn_income",
-                            // "FfdVersion": "1.2",
                             "Items": [
                                 {
-                                    // "Name": description.value || "Оплата",
                                     "Name": "Консультация в области IT",
                                     "Price": amount.value + '00',
                                     "Quantity": 1.00,
